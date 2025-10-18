@@ -1,0 +1,57 @@
+.popup-overlay {
+    position: fixed; /* чтобы перекрытие растягивалось по всему экрану */
+    inset: 0; /* заменяет top/left/right/bottom: 0 */
+    background: rgba(22, 22, 22, 0.24);
+    display: flex; /* центрируем попап */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-block {
+    border-radius: 16px;
+    padding: 40px;
+    width: 310px;
+    height: 211px;
+    background: var(--06);
+    position: relative; /* заменяем absolute */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центрирует иконку и текст */
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  .popup-block__icon {
+    display: block;
+    margin: 0 auto 16px; /* центр и отступ вниз */
+  }
+  
+  .popup-block__text {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--02);
+    margin: 0;
+  }
+  
+  .popup-block__close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .popup-block__close-button-icon {
+    padding: 9px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

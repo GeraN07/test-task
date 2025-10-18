@@ -1,0 +1,263 @@
+.edit-page__main-block {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.edit-page__back-btn {
+  background-color: inherit;
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--02);
+  padding-left: 0;
+  width: 120px;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 18px;
+}
+.edit-page__profile-data-block {
+  border-radius: 16px;
+  padding: 40px;
+  width: 360px;
+  height: 813px;
+  background: var(--06);
+  box-sizing: border-box;
+}
+.edit-page__profile-data-img {
+  border-radius: 8px;
+  width: 280px;
+  height: 485px;
+}
+.edit-page__profile-data-block-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.edit-page__profile-data-category-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  height: 208px;
+  margin-top: 40px;
+  width: 100%;
+}
+.edit-page__profile-data-category {
+  border-bottom: 1px solid #dadada;
+  width: 100%;
+  padding-bottom: 12px;
+  margin-top: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--03);
+  cursor: pointer;
+}
+.edit-page__profile-data-category.active {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--01);
+}
+.edit-page__profile-data-category:hover {
+  color: var(--accent);
+}
+.edit-form__caption {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--01);
+  margin-top: 0;
+}
+.edit-page__edit-form-block {
+  background: var(--06);
+  border-radius: 16px;
+  padding: 40px;
+  width: 760px;
+  box-sizing: border-box;
+}
+.edit-page__edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid #dadada;
+  padding-top: 24px;
+}
+.edit-form__label {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--01);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+}
+.edit-form__input {
+  border: 2px solid var(--04);
+  border-radius: 50px;
+  padding: 0px 8px 0px 16px;
+  width: 420px;
+  height: 42px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--01);
+  background: inherit;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+.edit-form__submit-button {
+  border-radius: 50px;
+  padding: 12px 42px;
+  width: 170px;
+  height: 46px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 420px;
+}
+
+.edit-form__input {
+  padding-right: 38px; /* добавляем место под крестик */
+}
+
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.clear-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.clear-btn svg path {
+  stroke: var(--03);
+}
+
+.clear-btn:hover svg path {
+  stroke: var(--01);
+}
+
+.edit-form__input-wrapper {
+  position: relative;
+  display: inline-block;
+  max-width: 420px;
+}
+
+.edit-form__clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 60%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--04);
+  line-height: 1;
+  padding: 0;
+  opacity: 0;
+}
+
+.edit-form__clear-btn:hover {
+  color: var(--accent);
+}
+
+.edit-form__input:focus + .edit-form__clear-btn {
+  opacity: 1;
+}
+
+@media (max-width: 1160px) {
+  .edit-page__main-block {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: 894px) {
+  .edit-page__main-block {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .edit-form__input {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .edit-page__main-block {
+    margin-left: 16px;
+    margin-right: 15px;
+  }
+}
+@media (max-width: 756px) {
+  .edit-page__profile-data-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .edit-page__profile-data-block-wrapper {
+    flex-direction: column;
+  }
+  .edit-page__edit-form-block {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .edit-page__back-btn .arrow-line {
+    display: none;
+  }
+  .edit-page__profile-data-block {
+    width: 100%;
+    height: 435px;
+    padding: 28px;
+    margin-bottom: 32px;
+  }
+  .edit-page__profile-data-img {
+    height: 187px;
+    max-width: 287px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  .edit-page__profile-data-category-block .active,
+  .edit-page__profile-data-category {
+    font-size: 14px;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+  .edit-page__profile-data-category-block {
+    margin-top: 24px;
+    max-height: 168px;
+  }
+  .edit-form__label {
+    font-size: 16px;
+  }
+  .edit-form__input {
+    font-size: 14px;
+  }
+  .edit-form__submit-button {
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .edit-page__profile-data-img {
+    width: 100%;
+  }
+}
