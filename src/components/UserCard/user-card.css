@@ -91,6 +91,10 @@
   color: var(--01);
   background: var(--06);
 }
+.user-card__dropdown-button:hover {
+  color: var(--accent);
+}
+
 .user-card.archived .user-card__dropdown-block {
   border-radius: 12px;
   padding: 8px;

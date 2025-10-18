@@ -26,7 +26,7 @@ const Home = () => {
   if (error) return <p>Ошибка загрузки данных</p>;
   if (!users) return null;
 
-  const activeUsers = users.filter(
+  const activeUsers = users.slice(0,6).filter(
     (user: any) => !archived.includes(user.id) && !hidden.includes(user.id)
   );
 
