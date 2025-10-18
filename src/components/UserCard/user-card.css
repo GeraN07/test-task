@@ -153,3 +153,13 @@
     height: 54px;
   }
 }
+@media (max-width: 375px) {
+  .home__archive-block,
+  .home__active-block {
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  .user-card {
+    width: 152px;
+  }
+}
