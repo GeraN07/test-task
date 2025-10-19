@@ -23,11 +23,18 @@ const Home = () => {
     return <Loader />;
   }
 
-  if (error) return <p>Ошибка загрузки данных</p>;
+  if (error)
+    return (
+      <div className="home__error-overlay">
+        <p className="home__error-message">Ошибка загрузки данных</p>
+      </div>
+    );
 
-  const activeUsers = users.slice(0,6).filter(
-    (user: any) => !archived.includes(user.id) && !hidden.includes(user.id)
-  );
+  const activeUsers = users
+    .slice(0, 6)
+    .filter(
+      (user: any) => !archived.includes(user.id) && !hidden.includes(user.id)
+    );
 
   const archivedUsers = users.filter((user: any) => archived.includes(user.id));
 
