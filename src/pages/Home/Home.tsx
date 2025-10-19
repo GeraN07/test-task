@@ -39,13 +39,13 @@ const Home = () => {
         <h2 className="home__active-block-caption">Активные</h2>
         <section className="home__active-block">
           {activeUsers.map((user: any) => (
-            <UserCard user={user} />
+            <UserCard key={user.id} user={user} />
           ))}
         </section>
         <h2 className="home__archive-block-caption">Архив</h2>
         <section className="home__archive-block">
           {archivedUsers.map((user: any) => (
-            <UserCard user={user} />
+            <UserCard key={user.id} user={user} />
           ))}
         </section>
       </main>

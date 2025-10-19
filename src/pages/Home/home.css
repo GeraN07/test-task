@@ -44,7 +44,7 @@
     margin-right: 15px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 350px) {
   .home__archive-block,
   .home__active-block {
     justify-content: center;

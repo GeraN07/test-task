@@ -55,8 +55,7 @@ const EditUser = () => {
     }
   }, [user, reset]);
 
-  const onSubmit = (data: UserFormData) => {
-    console.log("Сохранённые данные:", data);
+  const onSubmit = () => {
     setShowPopup(true);
     setTimeout(() => setShowPopup(false), 4000);
   };
