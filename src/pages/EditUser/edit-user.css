@@ -114,6 +114,10 @@
   width: 170px;
   height: 46px;
 }
+.edit-form__submit-button:hover {
+  background: var(--05);
+  color: var(--02);
+}
 
 .input-wrapper {
   position: relative;
@@ -123,7 +127,7 @@
 }
 
 .edit-form__input {
-  padding-right: 38px; /* добавляем место под крестик */
+  padding-right: 38px; 
 }
 
 .clear-btn {

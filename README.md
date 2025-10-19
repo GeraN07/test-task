@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# Test Task — React + TypeScript + Zustand + React Query
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Описание проекта  
+Интерфейс для управления пользователями.  
+Реализованы активные и архивные пользователи, редактирование данных, модальные окна, а также сохранение состояния с помощью Zustand.  
+Проект выполнен в рамках тестового задания.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии
 
-## React Compiler
+- **React 18**
+- **TypeScript**
+- **Zustand** — хранение состояния (архив, скрытые пользователи)
+- **React Query** — работа с данными и кэширование запросов
+- **CSS**
+- **React Router v6**
+- **Zod + React Hook Form** — валидация форм
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Основной функционал
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Загрузка списка пользователей с `https://jsonplaceholder.typicode.com/users`
+- Разделение на **Активных** и **Архивированных**
+- Возможность:
+  - Редактировать данные пользователя
+  - Архивировать / Разархивировать
+  - Скрывать пользователя
+- Popup при успешном сохранении
+- Адаптивная верстка
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Структура проекта
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+ ├─ api/                # функции для запросов
+ ├─ components/         # переиспользуемые UI-компоненты
+ │   ├─ Header/
+ │   ├─ Popup/
+ │   └─ UserCard/
+ ├─ pages/
+ │   ├─ Home/           # список пользователей
+ │   └─ EditUser/       # страница редактирования
+ ├─ store/              # Zustand store
+ ├─ schemas/            # Zod схемы для валидации
+ └─ App.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Установка и запуск
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Клонировать репозиторий
+git clone https://github.com/GeraN07/test-task.git
+
+# Перейти в папку проекта
+cd test-task
+
+# Установить зависимости
+npm install
+
+# Запустить проект
+npm run dev
 ```
+
+Проект запустится по адресу [http://localhost:5173](http://localhost:5173)
+
+---
+
+## Заметки
+
+- Данные пользователей берутся из `jsonplaceholder.typicode.com`.
+- Архивирование и скрытие реализованы на клиенте (локально через Zustand).
+- Валидация формы редактирования — через **Zod**.
+

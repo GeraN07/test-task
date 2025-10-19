@@ -140,11 +140,7 @@ const EditUser = () => {
                 </div>
                 {errors.name && <span>{errors.name.message}</span>}
               </label>
-              {/* <label className="edit-form__label">
-                Имя
-                <input className="edit-form__input" {...register("name")} />
-                {errors.name && <span>{errors.name.message}</span>}
-              </label> */}
+           
               <label className="edit-form__label">
                 Никнейм
                 <div className="edit-form__input-wrapper">
@@ -167,12 +163,6 @@ const EditUser = () => {
                 </div>
                 {errors.username && <span>{errors.username.message}</span>}
               </label>
-
-              {/* <label className="edit-form__label">
-                Никнейм
-                <input className="edit-form__input" {...register("username")} />
-                {errors.username && <span>{errors.username.message}</span>}
-              </label> */}
 
               <label className="edit-form__label">
                 Почта
@@ -213,11 +203,7 @@ const EditUser = () => {
                 {errors.city && <span>{errors.city.message}</span>}
               </label>
 
-              {/* <label className="edit-form__label">
-                Город
-                <input className="edit-form__input" {...register("city")} />
-                {errors.city && <span>{errors.city.message}</span>}
-              </label> */}
+          
 
               <label className="edit-form__label">
                 Телефон
@@ -238,11 +224,7 @@ const EditUser = () => {
                 </div>
                 {errors.phone && <span>{errors.phone.message}</span>}
               </label>
-              {/* <label className="edit-form__label">
-                Телефон
-                <input className="edit-form__input" {...register("phone")} />
-                {errors.phone && <span>{errors.phone.message}</span>}
-              </label> */}
+            
 
               <label className="edit-form__label">
                 Компания
@@ -267,11 +249,7 @@ const EditUser = () => {
                 {errors.company && <span>{errors.company.message}</span>}
               </label>
 
-              {/* <label className="edit-form__label">
-                Компания
-                <input className="edit-form__input" {...register("company")} />
-                {errors.company && <span>{errors.company.message}</span>}
-              </label> */}
+            
 
               <button className="edit-form__submit-button" type="submit">
                 Сохранить
