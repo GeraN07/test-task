@@ -1,189 +1,178 @@
 .user-card {
+  position: relative;
+  display: flex;
   border-radius: 16px;
   padding: 24px;
   width: 360px;
   height: 168px;
   background: var(--06);
   box-sizing: border-box;
-  display: flex;
-  position: relative;
 }
 
 .user-img-block {
   margin-right: 20px;
   border-radius: 8px;
 }
+
 .user-img {
-  border-radius: 8px;
   width: 112px;
   height: 120px;
+  border-radius: 8px;
 }
 
 .user-card.archived .user-img {
   filter: grayscale(1);
 }
-.user-info-username {
+
+.user-info-username,
+.user-info-company-name,
+.user-info-city-name {
   font-family: var(--font-family);
+  margin: 0;
+}
+
+.user-info-username {
   font-weight: 600;
   font-size: 20px;
   color: var(--accent);
-  margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   max-width: 171px;
 }
+
 .user-card.archived .user-info-username {
   color: var(--02);
 }
 
 .user-info-company-name {
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   color: var(--02);
-  margin: 0;
 }
+
 .user-card.archived .user-info-company-name {
   color: var(--03);
 }
 
 .user-info-city-name {
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;
   color: var(--03);
-  margin: 0;
   margin-top: 42px;
 }
+
 .user-card.archived .user-info-city-name {
   color: var(--04);
 }
+
 .user-info-icon {
   position: absolute;
   top: 25px;
   right: 24px;
-  cursor: pointer;
   padding: 4px 10px;
+  cursor: pointer;
 }
+
 .user-info-icon:hover path {
   fill: #22a0bc;
 }
+
 .user-info-icon:active path {
   fill: #595959;
 }
+
 .user-card__dropdown-block {
-  border-radius: 12px;
-  padding: 8px;
+  position: absolute;
+  right: -45%;
+  z-index: 100;
   width: 200px;
   height: 146px;
-  box-shadow: 0 0 2px 0 #5a5a5a;
+  padding: 8px;
+  border-radius: 12px;
   background: var(--06);
-  position: absolute;
-  z-index: 100;
-  right: -45%;
+  box-shadow: 0 0 2px 0 #5a5a5a;
   box-sizing: border-box;
 }
+
 .user-card__dropdown-button {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 16px;
+  font: 500 16px var(--font-family);
   color: var(--01);
   background: var(--06);
 }
+
 .user-card__dropdown-button:hover {
   color: var(--accent);
 }
 
 .user-card.archived .user-card__dropdown-block {
-  border-radius: 12px;
-  padding: 8px;
-  width: 200px;
   height: 54px;
 }
+
+/* --- Адаптив --- */
+
 @media (max-width: 824px) {
   .user-card {
-    background: var(--06);
-    box-sizing: border-box;
-    display: flex;
-    position: relative;
     flex-direction: column;
-    border-radius: 16px;
-    padding: 16px;
     width: 162px;
     height: 242px;
+    padding: 16px;
   }
+
   .user-img {
-    border-radius: 8px;
     width: 130px;
     height: 120px;
   }
+
   .user-info-icon {
     width: 3px;
     height: 10px;
-    top: unset;
     right: 18px;
     bottom: 76px;
+    top: unset;
   }
+
   .user-info-username {
-    font-family: var(--font-family);
-    font-weight: 600;
     font-size: 18px;
-    color: var(--accent);
   }
+
   .user-info-company-name {
-    font-family: var(--font-family);
     font-weight: 600;
     font-size: 14px;
-    color: var(--02);
   }
+
   .user-info-city-name {
-    font-family: var(--font-family);
     font-weight: 600;
     font-size: 10px;
-    color: var(--03);
     margin-top: 12px;
   }
+
   .user-card__dropdown-block {
     width: 160px;
     height: 137px;
   }
+
   .user-card__dropdown-button {
-    font-weight: 500;
     font-size: 14px;
   }
+
   .user-card.archived .user-card__dropdown-block {
-    width: 160px;
     height: 54px;
   }
 }
+
 @media (max-width: 375px) {
-  .home__archive-block,
-  .home__active-block {
-    row-gap: 10px;
-    column-gap: 10px;
-  }
   .user-card {
-    border-radius: 16px;
-    padding: 24px;
+    flex-direction: row;
     width: 360px;
     height: 168px;
-    background: var(--06);
-    box-sizing: border-box;
-    display: flex;
-    position: relative;
-    flex-direction: row;
+    padding: 24px;
   }
+
   .user-info-username {
     max-width: 100px;
   }
-  .user-info-icon {
-    position: absolute;
-    top: 25px;
-    right: 24px;
-    cursor: pointer;
-    padding: 4px 10px;
-  }
+
   .user-card__dropdown-block {
     right: 5%;
   }

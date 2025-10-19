@@ -2,71 +2,74 @@
   background-color: #fdfdfd;
   height: 56px;
 }
+
 .page-header__block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0 10px;
 }
+
 .page-header__logo-block,
 .page-header__user-block {
-  margin-top: 16px;
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
   height: 24px;
-  margin-right: 10px;
+  margin-top: 16px;
 }
+
 .favorites,
 .notification {
-  color: #000000;
-  vertical-align: text-bottom;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
   text-decoration: none;
-  position: relative;
   border-radius: 25%;
-  flex-direction: row;
-  padding-right: 3.5px;
-  padding-left: 3.5px;
+  padding: 0 3.5px;
+  position: relative;
 }
+
 .favorites {
   margin-right: 4px;
 }
+
 .user-data {
+  display: flex;
+  align-items: center;
   margin-left: 20px;
 }
+
 .user-icon {
-  max-height: 20px;
-  max-width: 20px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
 }
+
 .user-name {
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--02);
-  vertical-align: text-bottom;
   margin-left: 8px;
+  font: 500 16px var(--font-family);
+  color: var(--02);
 }
 
+/* адаптив */
 @media (max-width: 1160px) {
   .page-header__block {
-    margin-left: 32px;
-    margin-right: 32px;
+    padding: 0 32px;
   }
 }
+
 @media (max-width: 824px) {
   .page-header__block {
-    margin-left: 16px;
-    margin-right: 16px;
+    padding: 0 16px;
   }
 }
+
 @media (max-width: 425px) {
-  .favorites {
-    display: none;
-  }
-  .notification {
-    display: none;
-  }
+  .favorites,
+  .notification,
   .user-name {
     display: none;
   }
