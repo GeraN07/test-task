@@ -18,7 +18,6 @@ const Header = () => {
             <img className="notification-icon" src="../notification.svg" />
           </a>
           <span className="user-data">
-           
             <img className="user-icon" src="https://i.pravatar.cc/20" />
           </span>
           <span className="user-name">Ivan1234</span>
