@@ -31,7 +31,7 @@ const Home = () => {
     );
 
   const activeUsers = users
-    .slice(0, 6)
+    ?.slice(0, 6)
     .filter(
       (user: any) => !archived.includes(user.id) && !hidden.includes(user.id)
     );
