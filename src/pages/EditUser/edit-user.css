@@ -130,16 +130,17 @@
 
 .edit-form__clear-btn {
   position: absolute;
-  top: 50%;
   right: 12px;
+  top: 60%;
   transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
   font-size: 18px;
   color: var(--04);
+  line-height: 1;
+  padding: 0;
   opacity: 0;
-  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .edit-form__input:focus + .edit-form__clear-btn {
